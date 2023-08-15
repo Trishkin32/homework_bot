@@ -141,7 +141,7 @@ def main():
                 logger.debug("Новые статусы отсутствуют.")
                 timestamp = response["current_date"]
         except Exception as error:
-            error_message = f"Сбой в работе программы: {error}" 
+            error_message = f"Сбой в работе программы: {error}"
             logger.error(error_message)
         finally:
             time.sleep(RETRY_PERIOD)

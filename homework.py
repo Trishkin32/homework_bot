@@ -10,6 +10,7 @@ from dotenv import load_dotenv
 
 import exceptions
 
+
 load_dotenv()
 
 
@@ -29,26 +30,19 @@ HOMEWORK_VERDICTS = {
 }
 
 
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
-handler = logging.StreamHandler(sys.stdout)
-formatter = logging.Formatter(
-    "%(asctime)s - %(levelname)s - %(message)s"
-)
-handler.setFormatter(formatter)
-logger.addHandler(handler)
+logging.basicConfig(
+    level=logging.DEBUG,
+    format=(
+        "%(asctime)s, %(levelname)s, %(message)s"
+    ),
+    handlers=[logging.FileHandler("log.txt", encoding="UTF-8"),
+              logging.StreamHandler(sys.stdout)])
 
 
 def check_tokens():
     """Проверяет доступность переменных окружения."""
-    for key in (PRACTICUM_TOKEN, TELEGRAM_TOKEN, TELEGRAM_CHAT_ID):
-        if key is None:
-            logger.critical("Отсутствуют переменные окружения.")
-            return False
-        if not key:
-            logger.error("В переменной ничего нет.")
-            return False
-    return True
+    tokens = [PRACTICUM_TOKEN, TELEGRAM_TOKEN, TELEGRAM_CHAT_ID]
+    return all(tokens)
 
 
 def send_message(bot, message):
@@ -56,10 +50,12 @@ def send_message(bot, message):
     try:
         bot.send_message(chat_id=TELEGRAM_CHAT_ID, text=message)
     except Exception as error:
-        logger.error(f"Не удалось отправить сообщение - {error}")
-        raise exceptions.TelegramError(f"Сообщение не отправлено - {error}")
+        logging.error(f"Не удалось отправить сообщение - {error}")
+        raise exceptions.MessageSendingError(
+            f"Сообщение не отправлено - {error}"
+        )
     else:
-        logger.debug(f"Бот отправил сообщение: {message}")
+        logging.debug(f"Бот отправил сообщение: {message}")
 
 
 def get_api_answer(timestamp):
@@ -69,15 +65,15 @@ def get_api_answer(timestamp):
         response = requests.get(ENDPOINT, headers=HEADERS,
                                 params=params)
         if response.status_code != HTTPStatus.OK:
-            logger.error("Ответ от API не получен.")
-            raise Exception(
+            logging.error("Ответ от API не получен.")
+            raise exceptions.ApiConnectError(
                 "Ответ от API не получен."
             )
-        logger.info(
+        logging.info(
             "Ответ от API получен."
         )
     except Exception as error:
-        logger.error(f"Неверный код ответа: {error}")
+        logging.error(f"Неверный код ответа: {error}")
         raise exceptions.ApiConnectError(
             f"При обращени к API возникла ошибка: {error}")
     return response.json()
@@ -119,8 +115,8 @@ def parse_status(homework):
 def main():
     """Основная логика работы бота."""
     if not check_tokens():
-        logger.critical("Ошибка переменных окружения.")
-        SystemExit.exit("Бот недоступен.")
+        logging.critical("Ошибка переменных окружения.")
+        sys.exit("Бот недоступен.")
     bot = telegram.Bot(token=TELEGRAM_TOKEN)
     timestamp = int(time.time())
     error_message = ""
@@ -138,11 +134,17 @@ def main():
                 send_message(bot, status_message)
                 last_status_message = status_message
             else:
-                logger.debug("Новые статусы отсутствуют.")
+                logging.debug("Новые статусы отсутствуют.")
                 timestamp = response.get("current_date")
+        except exceptions.NotTelegramSending as error:
+            message = f"Сбой в работе программы: {error}"
+            logging.error(message)
         except Exception as error:
             error_message = f"Сбой в работе программы: {error}"
-            logger.error(error_message)
+            logging.error(error_message)
+            if error_message != last_status_message:
+                send_message(bot, error_message)
+                last_status_message = error_message
         finally:
             time.sleep(RETRY_PERIOD)
 

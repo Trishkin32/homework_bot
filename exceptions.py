@@ -1,10 +1,16 @@
-class ApiConnectError(Exception):
+class NotTelegramSending(Exception):
+    """Не для отправления в телеграм."""
+
+    pass
+
+
+class ApiConnectError(NotTelegramSending):
     """Исключение возникает при запросе к API."""
 
     pass
 
 
-class TelegramError(Exception):
-    """Исключение возникает при ошибки Telegrama."""
+class MessageSendingError(NotTelegramSending):
+    """Ошибка телеграма."""
 
     pass

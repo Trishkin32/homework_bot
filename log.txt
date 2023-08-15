@@ -1,0 +1,11 @@
+2023-08-15 21:38:34,108, ERROR, Неверный код ответа: name 'ENDPOINT' is not defined
+2023-08-15 21:38:34,108, ERROR, Сбой в работе программы: При обращени к API возникла ошибка: name 'ENDPOINT' is not defined
+2023-08-15 21:48:34,118, ERROR, Неверный код ответа: name 'ENDPOINT' is not defined
+2023-08-15 21:48:34,119, ERROR, Сбой в работе программы: При обращени к API возникла ошибка: name 'ENDPOINT' is not defined
+2023-08-15 22:20:50,255, DEBUG, Starting new HTTPS connection (1): practicum.yandex.ru:443
+2023-08-15 22:20:50,397, DEBUG, https://practicum.yandex.ru:443 "GET /api/user_api/homework_statuses/?from_date=1692127250 HTTP/1.1" 200 42
+2023-08-15 22:20:50,399, INFO, Ответ от API получен.
+2023-08-15 22:20:50,401, DEBUG, Entering: send_message
+2023-08-15 22:20:50,606, DEBUG, {'new_chat_members': [], 'new_chat_photo': [], 'photo': [], 'delete_chat_photo': False, 'chat': {'id': 1406053008, 'first_name': 'Владислав', 'type': 'private', 'username': 'Lichen_97'}, 'message_id': 15, 'text': 'Бот успешно запущен.', 'supergroup_chat_created': False, 'date': 1692127279, 'group_chat_created': False, 'entities': [], 'channel_chat_created': False, 'caption_entities': [], 'from': {'first_name': 'homework_bot', 'id': 6677984107, 'username': 'Only_homework_bot', 'is_bot': True}}
+2023-08-15 22:20:50,607, DEBUG, Exiting: send_message
+2023-08-15 22:20:50,608, DEBUG, Бот отправил сообщение: Бот успешно запущен.

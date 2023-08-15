@@ -134,7 +134,6 @@ def main():
                 status_message = parse_status(homework[0])
             else:
                 status_message = ("Бот успешно запущен.")
-            
             if status_message != last_status_message:
                 send_message(bot, status_message)
                 last_status_message = status_message
@@ -145,20 +144,7 @@ def main():
             error_message = f"Сбой в работе программы: {error}" 
             logger.error(error_message)
         finally:
-              time.sleep(RETRY_PERIOD)
-
-            # message = parse_status(homeworks[0])
-
-        #     if last_message != message:
-        #         last_message = message
-        #         send_message(bot, last_message)
-        #     else:
-        #         logger.debug("Статус работ не изменился.")
-        # except Exception as error:
-        #     message = f"Сбой в работе программы: {error}"
-        #     send_message(bot, message)
-        # finally:
-        #     time.sleep(RETRY_PERIOD)
+            time.sleep(RETRY_PERIOD)
 
 
 if __name__ == '__main__':

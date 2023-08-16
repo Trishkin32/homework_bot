@@ -14,9 +14,9 @@ import exceptions
 load_dotenv()
 
 
-PRACTICUM_TOKEN = os.getenv('PRACTICUM_TOKEN')
-TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
-TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
+PRACTICUM_TOKEN = os.getenv("PRACTICUM_TOKEN")
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
 RETRY_PERIOD = 600
 ENDPOINT = 'https://practicum.yandex.ru/api/user_api/homework_statuses/'
@@ -109,7 +109,7 @@ def parse_status(homework):
         raise ValueError("Нет такого статуса.")
     verdict = HOMEWORK_VERDICTS[homework["status"]]
     homework_name = homework["homework_name"]
-    return f'Изменился статус проверки работы "{homework_name}". {verdict}'
+    return f"Изменился статус проверки работы {homework_name!r}. {verdict!r}"
 
 
 def main():

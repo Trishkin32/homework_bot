@@ -9,3 +9,87 @@
 2023-08-15 22:20:50,606, DEBUG, {'new_chat_members': [], 'new_chat_photo': [], 'photo': [], 'delete_chat_photo': False, 'chat': {'id': 1406053008, 'first_name': 'Владислав', 'type': 'private', 'username': 'Lichen_97'}, 'message_id': 15, 'text': 'Бот успешно запущен.', 'supergroup_chat_created': False, 'date': 1692127279, 'group_chat_created': False, 'entities': [], 'channel_chat_created': False, 'caption_entities': [], 'from': {'first_name': 'homework_bot', 'id': 6677984107, 'username': 'Only_homework_bot', 'is_bot': True}}
 2023-08-15 22:20:50,607, DEBUG, Exiting: send_message
 2023-08-15 22:20:50,608, DEBUG, Бот отправил сообщение: Бот успешно запущен.
+2023-08-16 19:38:41,887, ERROR, Неверный код ответа: name 'ENDPOINT' is not defined
+2023-08-16 19:38:41,887, ERROR, Сбой в работе программы: При обращени к API возникла ошибка: name 'ENDPOINT' is not defined
+2023-08-16 19:39:31,093, DEBUG, Starting new HTTPS connection (1): practicum.yandex.ru:443
+2023-08-16 19:39:31,626, DEBUG, https://practicum.yandex.ru:443 "GET /api/user_api/homework_statuses/?from_date=1692203971 HTTP/1.1" 200 42
+2023-08-16 19:39:31,630, INFO, Ответ от API получен.
+2023-08-16 19:39:31,638, DEBUG, Entering: send_message
+2023-08-16 19:39:32,040, DEBUG, {'chat': {'type': 'private', 'first_name': 'Владислав', 'username': 'Lichen_97', 'id': 1406053008}, 'message_id': 17, 'caption_entities': [], 'delete_chat_photo': False, 'new_chat_members': [], 'group_chat_created': False, 'channel_chat_created': False, 'supergroup_chat_created': False, 'text': 'Бот успешно запущен.', 'new_chat_photo': [], 'photo': [], 'entities': [], 'date': 1692204001, 'from': {'is_bot': True, 'id': 6677984107, 'username': 'Only_homework_bot', 'first_name': 'homework_bot'}}
+2023-08-16 19:39:32,044, DEBUG, Exiting: send_message
+2023-08-16 19:39:32,044, DEBUG, Бот отправил сообщение: Бот успешно запущен.
+2023-08-16 19:49:32,063, DEBUG, Starting new HTTPS connection (1): practicum.yandex.ru:443
+2023-08-16 19:49:32,498, DEBUG, https://practicum.yandex.ru:443 "GET /api/user_api/homework_statuses/?from_date=1692203971 HTTP/1.1" 200 42
+2023-08-16 19:49:32,502, INFO, Ответ от API получен.
+2023-08-16 19:49:32,510, DEBUG, Новые статусы отсутствуют.
+2023-08-16 19:59:32,524, DEBUG, Starting new HTTPS connection (1): practicum.yandex.ru:443
+2023-08-16 19:59:32,860, DEBUG, https://practicum.yandex.ru:443 "GET /api/user_api/homework_statuses/?from_date=1692204601 HTTP/1.1" 200 42
+2023-08-16 19:59:32,864, INFO, Ответ от API получен.
+2023-08-16 19:59:32,872, DEBUG, Новые статусы отсутствуют.
+2023-08-16 20:09:32,891, DEBUG, Starting new HTTPS connection (1): practicum.yandex.ru:443
+2023-08-16 20:09:33,494, DEBUG, https://practicum.yandex.ru:443 "GET /api/user_api/homework_statuses/?from_date=1692205202 HTTP/1.1" 200 42
+2023-08-16 20:09:33,498, INFO, Ответ от API получен.
+2023-08-16 20:09:33,506, DEBUG, Новые статусы отсутствуют.
+2023-08-16 20:19:33,520, DEBUG, Starting new HTTPS connection (1): practicum.yandex.ru:443
+2023-08-16 20:19:33,990, DEBUG, https://practicum.yandex.ru:443 "GET /api/user_api/homework_statuses/?from_date=1692205802 HTTP/1.1" 200 42
+2023-08-16 20:19:33,995, INFO, Ответ от API получен.
+2023-08-16 20:19:33,999, DEBUG, Новые статусы отсутствуют.
+2023-08-16 20:29:33,283, CRITICAL, Ошибка переменных окружения.
+2023-08-16 20:29:53,585, CRITICAL, Ошибка переменных окружения.
+2023-08-16 20:32:24,194, DEBUG, Starting new HTTPS connection (1): practicum.yandex.ru:443
+2023-08-16 20:32:24,556, DEBUG, https://practicum.yandex.ru:443 "GET /api/user_api/homework_statuses/?from_date=1692207144 HTTP/1.1" 200 42
+2023-08-16 20:32:24,556, INFO, Ответ от API получен.
+2023-08-16 20:32:24,556, DEBUG, Entering: send_message
+2023-08-16 20:32:24,991, DEBUG, {'channel_chat_created': False, 'date': 1692207174, 'caption_entities': [], 'entities': [], 'message_id': 18, 'group_chat_created': False, 'chat': {'username': 'Lichen_97', 'type': 'private', 'first_name': 'Владислав', 'id': 1406053008}, 'delete_chat_photo': False, 'new_chat_photo': [], 'text': 'Бот успешно запущен.', 'new_chat_members': [], 'photo': [], 'supergroup_chat_created': False, 'from': {'username': 'Only_homework_bot', 'is_bot': True, 'first_name': 'homework_bot', 'id': 6677984107}}
+2023-08-16 20:32:24,995, DEBUG, Exiting: send_message
+2023-08-16 20:32:24,995, DEBUG, Бот отправил сообщение: Бот успешно запущен.
+2023-08-16 20:42:25,014, DEBUG, Starting new HTTPS connection (1): practicum.yandex.ru:443
+2023-08-16 20:42:25,476, DEBUG, https://practicum.yandex.ru:443 "GET /api/user_api/homework_statuses/?from_date=1692207144 HTTP/1.1" 200 42
+2023-08-16 20:42:25,480, INFO, Ответ от API получен.
+2023-08-16 20:42:25,488, DEBUG, Новые статусы отсутствуют.
+2023-08-16 20:52:25,504, DEBUG, Starting new HTTPS connection (1): practicum.yandex.ru:443
+2023-08-16 20:52:25,817, DEBUG, https://practicum.yandex.ru:443 "GET /api/user_api/homework_statuses/?from_date=1692207774 HTTP/1.1" 200 42
+2023-08-16 20:52:25,821, INFO, Ответ от API получен.
+2023-08-16 20:52:25,829, DEBUG, Новые статусы отсутствуют.
+2023-08-16 21:02:25,851, DEBUG, Starting new HTTPS connection (1): practicum.yandex.ru:443
+2023-08-16 21:02:26,565, DEBUG, https://practicum.yandex.ru:443 "GET /api/user_api/homework_statuses/?from_date=1692208374 HTTP/1.1" 200 42
+2023-08-16 21:02:26,569, INFO, Ответ от API получен.
+2023-08-16 21:02:26,573, DEBUG, Новые статусы отсутствуют.
+2023-08-16 21:12:26,586, DEBUG, Starting new HTTPS connection (1): practicum.yandex.ru:443
+2023-08-16 21:12:27,229, DEBUG, https://practicum.yandex.ru:443 "GET /api/user_api/homework_statuses/?from_date=1692208975 HTTP/1.1" 200 42
+2023-08-16 21:12:27,230, INFO, Ответ от API получен.
+2023-08-16 21:12:27,231, DEBUG, Новые статусы отсутствуют.
+2023-08-16 21:22:27,241, DEBUG, Starting new HTTPS connection (1): practicum.yandex.ru:443
+2023-08-16 21:22:27,906, DEBUG, https://practicum.yandex.ru:443 "GET /api/user_api/homework_statuses/?from_date=1692209576 HTTP/1.1" 200 42
+2023-08-16 21:22:27,907, INFO, Ответ от API получен.
+2023-08-16 21:22:27,908, DEBUG, Новые статусы отсутствуют.
+2023-08-16 21:32:27,925, DEBUG, Starting new HTTPS connection (1): practicum.yandex.ru:443
+2023-08-16 21:32:28,250, DEBUG, https://practicum.yandex.ru:443 "GET /api/user_api/homework_statuses/?from_date=1692210176 HTTP/1.1" 200 42
+2023-08-16 21:32:28,251, INFO, Ответ от API получен.
+2023-08-16 21:32:28,253, DEBUG, Новые статусы отсутствуют.
+2023-08-16 23:41:17,431, DEBUG, Starting new HTTPS connection (1): practicum.yandex.ru:443
+2023-08-16 23:41:17,803, DEBUG, https://practicum.yandex.ru:443 "GET /api/user_api/homework_statuses/?from_date=1692218477 HTTP/1.1" 200 42
+2023-08-16 23:41:17,803, INFO, Ответ от API получен.
+2023-08-16 23:41:17,807, DEBUG, Entering: send_message
+2023-08-16 23:41:18,198, DEBUG, {'date': 1692218507, 'caption_entities': [], 'new_chat_members': [], 'supergroup_chat_created': False, 'new_chat_photo': [], 'photo': [], 'chat': {'first_name': 'Владислав', 'id': 1406053008, 'type': 'private', 'username': 'Lichen_97'}, 'entities': [], 'text': 'Бот успешно запущен.', 'group_chat_created': False, 'channel_chat_created': False, 'delete_chat_photo': False, 'message_id': 19, 'from': {'id': 6677984107, 'is_bot': True, 'username': 'Only_homework_bot', 'first_name': 'homework_bot'}}
+2023-08-16 23:41:18,198, DEBUG, Exiting: send_message
+2023-08-16 23:41:18,198, DEBUG, Бот отправил сообщение: Бот успешно запущен.
+2023-08-16 23:44:38,527, DEBUG, Starting new HTTPS connection (1): practicum.yandex.ru:443
+2023-08-16 23:44:38,814, DEBUG, https://practicum.yandex.ru:443 "GET /api/user_api/homework_statuses/?from_date=1692218678 HTTP/1.1" 200 42
+2023-08-16 23:44:38,814, INFO, Ответ от API получен.
+2023-08-16 23:44:38,818, DEBUG, Entering: send_message
+2023-08-16 23:44:39,173, DEBUG, {'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'entities': [], 'chat': {'first_name': 'Владислав', 'id': 1406053008, 'username': 'Lichen_97', 'type': 'private'}, 'group_chat_created': False, 'text': 'Бот успешно запущен.', 'caption_entities': [], 'supergroup_chat_created': False, 'date': 1692218708, 'message_id': 20, 'new_chat_photo': [], 'new_chat_members': [], 'from': {'id': 6677984107, 'first_name': 'homework_bot', 'is_bot': True, 'username': 'Only_homework_bot'}}
+2023-08-16 23:44:39,177, DEBUG, Exiting: send_message
+2023-08-16 23:44:39,177, DEBUG, Бот отправил сообщение: Бот успешно запущен.
+2023-08-16 23:54:39,180, DEBUG, Starting new HTTPS connection (1): practicum.yandex.ru:443
+2023-08-16 23:54:39,448, DEBUG, https://practicum.yandex.ru:443 "GET /api/user_api/homework_statuses/?from_date=1692218678 HTTP/1.1" 200 42
+2023-08-16 23:54:39,452, INFO, Ответ от API получен.
+2023-08-16 23:54:39,452, DEBUG, Новые статусы отсутствуют.
+2023-08-17 00:04:39,469, DEBUG, Starting new HTTPS connection (1): practicum.yandex.ru:443
+2023-08-17 00:04:39,754, DEBUG, https://practicum.yandex.ru:443 "GET /api/user_api/homework_statuses/?from_date=1692219308 HTTP/1.1" 200 42
+2023-08-17 00:04:39,754, INFO, Ответ от API получен.
+2023-08-17 00:04:39,757, DEBUG, Новые статусы отсутствуют.
+2023-08-17 00:14:39,771, DEBUG, Starting new HTTPS connection (1): practicum.yandex.ru:443
+2023-08-17 00:14:40,055, DEBUG, https://practicum.yandex.ru:443 "GET /api/user_api/homework_statuses/?from_date=1692219909 HTTP/1.1" 200 42
+2023-08-17 00:14:40,059, INFO, Ответ от API получен.
+2023-08-17 00:14:40,059, DEBUG, Новые статусы отсутствуют.

@@ -109,7 +109,7 @@ def parse_status(homework):
         raise ValueError("Нет такого статуса.")
     verdict = HOMEWORK_VERDICTS[homework["status"]]
     homework_name = homework["homework_name"]
-    return f"Изменился статус проверки работы {homework_name!r}. {verdict!r}"
+    return f'Изменился статус проверки работы "{homework_name}". {verdict}'
 
 
 def main():
